@@ -36,6 +36,7 @@ dependencies {
 	}
 ```
 
+### 在需要地方进行如下校验
 ```
  LxAction.getInstance()
                 .addAction(new Action() {
@@ -47,7 +48,7 @@ dependencies {
                 .addValid(new LoginValid(this))//登录校验
                 .doCheck();
 ```
-
+### 登录校验器
 ```
 public class LoginValid implements Valid {
     private Context context;
