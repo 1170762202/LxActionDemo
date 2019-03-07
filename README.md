@@ -70,7 +70,8 @@ public class LoginValid implements Valid {
     }
 }
 ```
-### 登录了界面
+### 登录界面
+
 ```public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
