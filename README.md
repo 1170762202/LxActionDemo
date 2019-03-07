@@ -65,7 +65,25 @@ public class LoginValid implements Valid {
 
     @Override
     public void doValid() {
+    //进入登录界面
         context.startActivity(new Intent(context, LoginActivity.class));
+    }
+}
+```
+### 登录了界面
+```public class LoginActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+    }
+
+    public void login(View view) {
+        Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+        MainActivity.isLogin = true;
+        //注意登录成功后执行doAction，继续校验
+        LxAction.getInstance().doCheck();
+        finish();
     }
 }
 ```
